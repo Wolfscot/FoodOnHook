@@ -13,15 +13,10 @@ namespace FoodOnHook.Data.Models
 
         [Required]
         [MaxLength(NameMaxLength)]
-        public string Name { get; set; }
-
-        [Required]        
-        public int Quantity { get; set; }
+        public string Name { get; set; }      
 
         [Required]
         public double Grams { get; set; }
-
-
         [Required]
         public double Price { get; set; }
 

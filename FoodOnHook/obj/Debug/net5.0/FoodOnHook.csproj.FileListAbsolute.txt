@@ -83,3 +83,4 @@ D:\SOFTUNI\C Web Developer\c#Web\Project second try\FoodOnHook\FoodOnHook\obj\De
 D:\SOFTUNI\C Web Developer\c#Web\Project second try\FoodOnHook\FoodOnHook\obj\Debug\net5.0\ref\FoodOnHook.dll
 D:\SOFTUNI\C Web Developer\c#Web\Project second try\FoodOnHook\FoodOnHook\obj\Debug\net5.0\FoodOnHook.pdb
 D:\SOFTUNI\C Web Developer\c#Web\Project second try\FoodOnHook\FoodOnHook\obj\Debug\net5.0\FoodOnHook.genruntimeconfig.cache
+D:\SOFTUNI\C Web Developer\c#Web\Project second try\FoodOnHook\FoodOnHook\obj\Debug\net5.0\Razor\Views\Dish\Add.cshtml.g.cs

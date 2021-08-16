@@ -50,7 +50,8 @@ namespace FoodOnHook.Infrastructure
                 new Category { Name = "Sandwitch" },
                 new Category { Name = "Side Dish" },                
                 new Category { Name = "Main dish" },
-                new Category { Name = "Dessert" }
+                new Category { Name = "Dessert" },
+                new Category { Name = "Apetizer and Starter" }
 
 
             });
