@@ -1,5 +1,7 @@
-﻿body {
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+﻿.navbar {
+    
+    background: linear-gradient(90deg, rgba(90,128,232,1) 30%, rgba(66,167,227,1) 60%, rgba(30,223,219,1) 100%);
+    color: darkblue;
 }
 
 a.navbar-brand {
@@ -10,7 +12,7 @@ a.navbar-brand {
 
 /* Provide sufficient contrast against white background */
 a {
-  color: #0366d6;
+    color: darkblue;
 }
 
 .btn-primary {
@@ -28,7 +30,9 @@ a {
 /* Sticky footer styles
 -------------------------------------------------- */
 html {
-  font-size: 14px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 18px;
+    color: darkblue;
 }
 @media (min-width: 768px) {
   html {
