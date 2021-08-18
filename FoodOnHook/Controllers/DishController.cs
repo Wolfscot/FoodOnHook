@@ -104,7 +104,7 @@ namespace FoodOnHook.Controllers
             this.data.Dishes.Add(dishData);
             this.data.SaveChanges();
 
-            return RedirectToAction("Index", "Home");
+            return RedirectToAction(nameof(All));
         }
 
         private IEnumerable<CategoryViewModel> GetCategories()
