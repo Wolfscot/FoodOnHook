@@ -4,14 +4,9 @@
     ViewData["Title"] = "Food On Hook";
 }
 
-@{
-    var dishes = Model.Dishes;
-    var firstDish = dishes.Any() ? dishes[0] : null;
-    var secondDish = dishes.Count > 1 ? dishes[1] : null;
-    var thirdDish = dishes.Count > 2 ? dishes[2] : null;
-}
 
-@if (!dishes.Any())
+
+@if (!Model.Dishes.Any())
 {
     <div class="jumbotron">
         <h1 class="display-4">Hook your Food!</h1>
@@ -27,30 +22,13 @@
 
 <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
     <div class="carousel-inner">
-        @if (firstDish != null)
+        @for (int i = 0; i < Model.Dishes.Count; i++)
         {
-            <div class="carousel-item active">
-                <img class="d-block w-100" src="@firstDish.ImageUrl" alt="@firstDish.Name @firstDish.Price">
+            var dish = Model.Dishes[i];
+            <div class="carousel-item @(i == 0 ? "active" : string.Empty)">
+                <img class="d-block w-100" src="@dish.ImageUrl" alt="@dish.Name @dish.Price">
                 <div class="carousel-caption d-none d-md-block">
-                    <h5><a class="btn btn-primary" asp-controller="Dishes" asp-action="Details" asp-route-id="@firstDish.Id">@firstDish.Restaurant  @firstDish.Name</a></h5>
-                </div>
-            </div>
-        }
-        @if (secondDish != null)
-        {
-            <div class="carousel-item">
-                <img class="d-block w-100" src="@secondDish.ImageUrl" alt="@secondDish.Name @secondDish.Price">
-                <div class="carousel-caption d-none d-md-block">
-                    <h5><a class="btn btn-primary" asp-controller="Dishes" asp-action="Details" asp-route-id="@secondDish.Id">@secondDish.Restaurant  @secondDish.Name</a></h5>
-                </div>
-            </div>
-        }
-        @if (thirdDish != null)
-        {
-            <div class="carousel-item">
-                <img class="d-block w-100" src="@thirdDish.ImageUrl" alt="@thirdDish.Name @thirdDish.Price">
-                <div class="carousel-caption d-none d-md-block">
-                    <h5><a class="btn btn-primary" asp-controller="Dishes" asp-action="Details" asp-route-id="@thirdDish.Id">@thirdDish.Restaurant  @thirdDish.Name</a></h5>
+                    <h5><a class="btn btn-primary" asp-controller="Dishes" asp-action="Details" asp-route-id="@dish.Id">@dish.Name  @dish.Price</a></h5>
                 </div>
             </div>
         }
