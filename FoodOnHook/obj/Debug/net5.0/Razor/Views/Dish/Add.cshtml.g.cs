@@ -47,8 +47,22 @@ using FoodOnHook.Models.Category;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 6 "D:\SOFTUNI\C Web Developer\c#Web\Project second try\FoodOnHook\FoodOnHook\Views\_ViewImports.cshtml"
+using FoodOnHook.Models.Restaurant;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 7 "D:\SOFTUNI\C Web Developer\c#Web\Project second try\FoodOnHook\FoodOnHook\Views\_ViewImports.cshtml"
+using FoodOnHook.Models.Cousine;
+
+#line default
+#line hidden
+#nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"92152158a8f81f69dbbf372f122d78da656a37ba", @"/Views/Dish/Add.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"b29e1975372d88f0a70972c2e98376b81b30f364", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"b5b70da48a0468d5a06cf80b8f04626698b87dc0", @"/Views/_ViewImports.cshtml")]
     public class Views_Dish_Add : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<DishFormModel>
     {
         private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_0 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("class", new global::Microsoft.AspNetCore.Html.HtmlString("form-control"), global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
@@ -94,7 +108,7 @@ using FoodOnHook.Models.Category;
 #line hidden
 #nullable disable
             WriteLiteral("<div class=\"row\">\r\n    <div class=\"col-sm-12 offset-lg-2 col-lg-8 offset-xl-3 col-xl-6\">\r\n        <h2 class=\"heading-margin text-center\">Add Dish</h2>\r\n\r\n        ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "92152158a8f81f69dbbf372f122d78da656a37ba6238", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "92152158a8f81f69dbbf372f122d78da656a37ba6669", async() => {
                 WriteLiteral(@"
             <div class=""form-row"">
                 <div class=""form-group col-md-6"">
@@ -131,7 +145,7 @@ using FoodOnHook.Models.Category;
             </div>
             <div class=""form-group"">
                 ");
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("label", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "92152158a8f81f69dbbf372f122d78da656a37ba8667", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("label", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "92152158a8f81f69dbbf372f122d78da656a37ba9098", async() => {
                     WriteLiteral("Category");
                 }
                 );
@@ -156,7 +170,7 @@ __Microsoft_AspNetCore_Mvc_TagHelpers_LabelTagHelper.For = ModelExpressionProvid
                 Write(__tagHelperExecutionContext.Output);
                 __tagHelperExecutionContext = __tagHelperScopeManager.End();
                 WriteLiteral("\r\n                ");
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("select", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "92152158a8f81f69dbbf372f122d78da656a37ba10574", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("select", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "92152158a8f81f69dbbf372f122d78da656a37ba11005", async() => {
                     WriteLiteral("\r\n");
 #nullable restore
 #line 46 "D:\SOFTUNI\C Web Developer\c#Web\Project second try\FoodOnHook\FoodOnHook\Views\Dish\Add.cshtml"
@@ -167,7 +181,7 @@ __Microsoft_AspNetCore_Mvc_TagHelpers_LabelTagHelper.For = ModelExpressionProvid
 #line hidden
 #nullable disable
                     WriteLiteral("                        ");
-                    __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "92152158a8f81f69dbbf372f122d78da656a37ba11171", async() => {
+                    __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "92152158a8f81f69dbbf372f122d78da656a37ba11602", async() => {
 #nullable restore
 #line 48 "D:\SOFTUNI\C Web Developer\c#Web\Project second try\FoodOnHook\FoodOnHook\Views\Dish\Add.cshtml"
                                                 Write(category.Name);
@@ -227,7 +241,7 @@ __Microsoft_AspNetCore_Mvc_TagHelpers_SelectTagHelper.For = ModelExpressionProvi
                 Write(__tagHelperExecutionContext.Output);
                 __tagHelperExecutionContext = __tagHelperScopeManager.End();
                 WriteLiteral("\r\n                ");
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("span", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "92152158a8f81f69dbbf372f122d78da656a37ba14797", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("span", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "92152158a8f81f69dbbf372f122d78da656a37ba15228", async() => {
                 }
                 );
                 __Microsoft_AspNetCore_Mvc_TagHelpers_ValidationMessageTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.TagHelpers.ValidationMessageTagHelper>();

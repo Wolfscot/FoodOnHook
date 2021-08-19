@@ -47,8 +47,22 @@ using FoodOnHook.Models.Category;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 6 "D:\SOFTUNI\C Web Developer\c#Web\Project second try\FoodOnHook\FoodOnHook\Views\_ViewImports.cshtml"
+using FoodOnHook.Models.Restaurant;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 7 "D:\SOFTUNI\C Web Developer\c#Web\Project second try\FoodOnHook\FoodOnHook\Views\_ViewImports.cshtml"
+using FoodOnHook.Models.Cousine;
+
+#line default
+#line hidden
+#nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"665cb7745ea048351f2ed597da750456600e8f40", @"/Views/Home/Index.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"b29e1975372d88f0a70972c2e98376b81b30f364", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"b5b70da48a0468d5a06cf80b8f04626698b87dc0", @"/Views/_ViewImports.cshtml")]
     public class Views_Home_Index : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<IndexViewModel>
     {
         private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_0 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("asp-controller", "Dishes", global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
@@ -100,7 +114,7 @@ using FoodOnHook.Models.Category;
 #line hidden
 #nullable disable
             WriteLiteral("    <div class=\"jumbotron\">\r\n        <h1 class=\"display-4\">Hook your Food!</h1>\r\n        <p class=\"lead\">No Food Offers. Wait a little bit</p>\r\n        <hr class=\"my-4\">\r\n        <p class=\"lead\">\r\n            ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "665cb7745ea048351f2ed597da750456600e8f406466", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "665cb7745ea048351f2ed597da750456600e8f406897", async() => {
                 WriteLiteral("Add Dish");
             }
             );
@@ -175,7 +189,7 @@ WriteAttributeValue(" ", 857, dish.Price, 858, 11, false);
 #nullable disable
             EndWriteAttribute();
             WriteLiteral(">\r\n                <div class=\"carousel-caption d-none d-md-block\">\r\n                    <h5>");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "665cb7745ea048351f2ed597da750456600e8f4010317", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "665cb7745ea048351f2ed597da750456600e8f4010748", async() => {
 #nullable restore
 #line 31 "D:\SOFTUNI\C Web Developer\c#Web\Project second try\FoodOnHook\FoodOnHook\Views\Home\Index.cshtml"
                                                                                                                    Write(dish.Name);

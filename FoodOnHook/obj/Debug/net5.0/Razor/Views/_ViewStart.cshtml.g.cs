@@ -47,8 +47,22 @@ using FoodOnHook.Models.Category;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 6 "D:\SOFTUNI\C Web Developer\c#Web\Project second try\FoodOnHook\FoodOnHook\Views\_ViewImports.cshtml"
+using FoodOnHook.Models.Restaurant;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 7 "D:\SOFTUNI\C Web Developer\c#Web\Project second try\FoodOnHook\FoodOnHook\Views\_ViewImports.cshtml"
+using FoodOnHook.Models.Cousine;
+
+#line default
+#line hidden
+#nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"7091c65830b0329e613be026ede8a57552863778", @"/Views/_ViewStart.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"b29e1975372d88f0a70972c2e98376b81b30f364", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"b5b70da48a0468d5a06cf80b8f04626698b87dc0", @"/Views/_ViewImports.cshtml")]
     public class Views__ViewStart : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<dynamic>
     {
         #pragma warning disable 1998

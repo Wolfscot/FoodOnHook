@@ -1,8 +1,10 @@
 ﻿using FoodOnHook.Data;
 using FoodOnHook.Data.Models;
+using FoodOnHook.Infrastructure;
 using FoodOnHook.Models;
 using FoodOnHook.Models.Category;
 using FoodOnHook.Models.Dish;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
@@ -69,14 +71,35 @@ namespace FoodOnHook.Controllers
 
             return View(query);
         }
-        public IActionResult Add() => View(new DishFormModel
+
+        [Authorize]
+        public IActionResult Add()
         {
-            Categories = this.GetCategories()
-        });
+            if (!this.UserIsRestaurantOwner())
+            {
+                return RedirectToAction(nameof(RestaurantController.RestaurantOwner), "Restaurants");
+            }
+
+            return View(new DishFormModel
+            {
+                Categories = this.GetCategories()
+            });
+        }
 
         [HttpPost]
+        [Authorize]
         public IActionResult Add(DishFormModel dish)
         {
+            var restaurantId = this.data
+                .Restaurants
+                .Where(r => r.UserId == this.User.GetId())
+                .Select(r => r.Id)
+                .FirstOrDefault();
+
+            if (restaurantId == 0)
+            {
+                return RedirectToAction(nameof(RestaurantController.RestaurantOwner), "Restaurants");
+            }
             if (!this.data.Categories.Any(d => d.Id == dish.CategoryId))
             {
                 this.ModelState.AddModelError(nameof(dish.CategoryId), "There is no such a category");
@@ -116,6 +139,11 @@ namespace FoodOnHook.Controllers
                     Name = c.Name
                 })
                 .ToList();
+
+        private bool UserIsRestaurantOwner()
+            => this.data
+                .Restaurants
+                .Any(r => r.UserId == this.User.GetId());
     }
 }
 

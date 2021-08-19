@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FoodOnHook.Models.Cousine;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -33,5 +34,7 @@ namespace FoodOnHook.Models.Restaurant
         [Required]
         [Display(Name = "Cousine")]
         public int CousineId { get; set; }
+
+        public IEnumerable<CousineViewModel> Cousines { get; set; }
     }
 }

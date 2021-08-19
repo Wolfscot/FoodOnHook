@@ -5,6 +5,11 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using FoodOnHook.Infrastructure;
+using static FoodOnHook.Data.Models.Restaurant;
+using FoodOnHook.Data.Models;
+using FoodOnHook.Models.Restaurant;
+using FoodOnHook.Models.Cousine;
 
 namespace FoodOnHook.Controllers
 {
@@ -20,34 +25,48 @@ namespace FoodOnHook.Controllers
 
         [HttpPost]
         [Authorize]
-        public IActionResult RestaurantOwner(RestaurantOwnerForm dealer)
+        public IActionResult RestaurantOwner(RestaurantOwnerFormModel restaurant)
         {
             var userId = this.User.GetId();
 
-            var userIdAlreadyDealer = this.data
-                .Dealers
-                .Any(d => d.UserId == userId);
+            var userIdAlreadyOwner = this.data
+                .Restaurants
+                .Any(r => r.UserId == userId);
 
-            if (userIdAlreadyDealer)
+            if (userIdAlreadyOwner)
             {
                 return BadRequest();
             }
 
             if (!ModelState.IsValid)
             {
-                return View(dealer);
+                return View(restaurant);
             }
 
-            var dealerData = new Dealer
+            var restaurantData = new Restaurant
             {
-                Name = dealer.Name,
-                PhoneNumber = dealer.PhoneNumber,
+                Name = restaurant.Name,
+                Address = restaurant.Address,
+                PhoneNumber = restaurant.PhoneNumber,
+                ImageUrl = restaurant.ImageUrl,
+                CousineId = restaurant.CousineId,
                 UserId = userId
             };
 
-            this.data.Dealers.Add(dealerData);
+            this.data.Restaurants.Add(restaurantData);
             this.data.SaveChanges();
 
-            return RedirectToAction("All", "Cars");
+            return RedirectToAction("All", "Dishes");
         }
+
+        private IEnumerable<CousineViewModel> GetCousines()
+          => this.data
+              .Cousines
+              .Select(c => new CousineViewModel
+              {
+                  Id = c.Id,
+                  Name = c.Name
+              })
+              .ToList();
+    }
 }

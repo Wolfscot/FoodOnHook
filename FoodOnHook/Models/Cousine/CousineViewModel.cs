@@ -7,5 +7,8 @@ namespace FoodOnHook.Models.Cousine
 {
     public class CousineViewModel
     {
+        public int Id { get; init; }
+
+        public string Name { get; init; }
     }
 }
