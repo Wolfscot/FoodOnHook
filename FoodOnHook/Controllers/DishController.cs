@@ -77,7 +77,7 @@ namespace FoodOnHook.Controllers
         {
             if (!this.UserIsRestaurantOwner())
             {
-                return RedirectToAction(nameof(RestaurantController.RestaurantOwner), "Restaurants");
+                return RedirectToAction(nameof(RestaurantController.RestaurantOwner), "Restaurant");
             }
 
             return View(new DishFormModel
