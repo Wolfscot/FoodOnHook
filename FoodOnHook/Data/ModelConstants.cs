@@ -43,7 +43,7 @@ namespace FoodOnHook.Data
             public const int PhoneNumberMaxLength = 30;
         }
 
-        public class Classification
+        public class Cousine
         {
             public const int NameMaxLength = 20;
         }
